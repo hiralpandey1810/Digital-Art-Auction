@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masterpiece Market | The Daylight Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#fe7e4f",
+                        "on-tertiary-fixed": "#362459",
+                        "inverse-on-surface": "#9d9d9a",
+                        "background": "#faf9f6",
+                        "primary-fixed": "#ffad91",
+                        "on-error": "#fff7f6",
+                        "outline": "#797b78",
+                        "surface-dim": "#d9dbd6",
+                        "on-tertiary": "#fef7ff",
+                        "on-background": "#303330",
+                        "secondary": "#0e6781",
+                        "surface-variant": "#e1e3df",
+                        "on-surface-variant": "#5d605c",
+                        "tertiary-container": "#d6beff",
+                        "on-surface": "#303330",
+                        "surface-container-highest": "#e1e3df",
+                        "tertiary-fixed-dim": "#c8b1f0",
+                        "on-primary-fixed": "#4d1400",
+                        "primary-fixed-dim": "#ff9974",
+                        "on-secondary": "#f2faff",
+                        "error": "#ac3434",
+                        "surface-tint": "#a53d12",
+                        "on-tertiary-container": "#4b386e",
+                        "on-error-container": "#65000b",
+                        "error-dim": "#70030f",
+                        "primary-container": "#ffad91",
+                        "on-secondary-fixed": "#004558",
+                        "on-secondary-fixed-variant": "#04647d",
+                        "on-primary-fixed-variant": "#7f2700",
+                        "surface-bright": "#faf9f6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#702100",
+                        "primary-dim": "#953205",
+                        "secondary-fixed-dim": "#97defc",
+                        "tertiary-dim": "#5c4981",
+                        "surface": "#faf9f6",
+                        "surface-container-high": "#e8e8e4",
+                        "primary": "#a53d12",
+                        "outline-variant": "#b1b2af",
+                        "surface-container-low": "#f4f4f0",
+                        "tertiary-fixed": "#d6beff",
+                        "inverse-surface": "#0d0f0d",
+                        "error-container": "#f56965",
+                        "tertiary": "#69558e",
+                        "secondary-container": "#baeaff",
+                        "secondary-fixed": "#baeaff",
+                        "surface-container": "#eeeeea",
+                        "on-secondary-container": "#005971",
+                        "on-primary": "#fff7f5",
+                        "on-tertiary-fixed-variant": "#544178",
+                        "secondary-dim": "#005b72"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #faf9f6; color: #303330; }
+        .serif-text { font-family: 'Noto Serif', serif; }
+        .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-2xl shadow-xl shadow-[#303330]/5 transition-all duration-300">
+<div class="flex items-center justify-between px-8 py-4 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-['Noto_Serif'] font-bold text-[#a53d12] text-2xl tracking-tight italic" href="#">Masterpiece Market</a>
+<div class="hidden md:flex gap-8">
+<a class="text-[#a53d12] font-semibold border-b-2 border-[#a53d12] pb-1" href="#">Explore</a>
+<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Auctions</a>
+<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Artists</a>
+<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full w-64 transition-all duration-300 focus-within:shadow-md">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-on-surface-variant/50" placeholder="Search artists..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:scale-[1.02] active:opacity-80 transition-all p-2 text-on-surface">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:scale-[1.02] active:opacity-80 transition-all p-2 text-on-surface">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:scale-[1.02] hover:shadow-lg transition-all duration-300 active:opacity-80">
+                        Connect Wallet
+                    </button>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-[1920px] mx-auto px-8">
+<!-- Hero: Live Auction Highlight -->
+<section class="mt-12 mb-20 relative overflow-hidden rounded-[2.5rem] bg-surface-container-low h-[700px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-90 scale-105" data-alt="Modern abstract oil painting with warm terracotta and ochre strokes, high resolution editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrQkh-gDMsEKIW3b5LF_TQ1wGwIaeKXd6KXROlKGUtVyMO0CiB6oAR5TzPyizxnoagje_CIm4AU9j28O62lgQk8sgYxPwXJM4fkCS3YgN5UGQkA9uOcPOxzT-rl3S0m9hp41qmXtZIjkEc-wNIdM0bPXH5Rlh8A25dfxQkXrhM21ePHLLYH1Vk7c4CgdNwnFgJyO8-hZFBtAmKaVKJELVJ50UD9t4lVyDsGq5_5DZT6QERbRzOqwJ-YY3DY4hyJwdOhRBkalWI1s4"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/80 via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-16 max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+                    Live Now
+                </div>
+<h1 class="serif-text text-7xl font-bold text-on-surface leading-[1.1] mb-6">Celestial Echoes <span class="italic font-light">No. 4</span></h1>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-8 max-w-md">The centerpiece of Julian Varas' mid-career retrospective, capturing the essence of morning light through layered acrylics.</p>
+<div class="flex items-center gap-8 mb-10">
+<div>
+<p class="text-on-surface-variant text-sm font-medium uppercase tracking-wider mb-1">Current Bid</p>
+<p class="text-3xl font-bold text-primary">12.40 ETH</p>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div>
+<p class="text-on-surface-variant text-sm font-medium uppercase tracking-wider mb-1">Ends In</p>
+<p class="text-3xl font-bold text-on-surface serif-text">04:22:15</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] hover:shadow-2xl transition-all duration-300">Place a Bid</button>
+<button class="bg-surface-container-lowest/80 backdrop-blur-md text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-all duration-300">View Details</button>
+</div>
+</div>
+</section>
+<!-- Trending Artworks Grid -->
+<section class="mb-32">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="serif-text text-4xl font-bold text-on-surface mb-2">Trending Artworks</h2>
+<p class="text-on-surface-variant">Handpicked pieces gaining momentum this week.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all duration-300" href="#">
+                    Browse All <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container mb-6 shadow-sm group-hover:shadow-2xl transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist sculpture of a female figure in white plaster, soft natural shadows in a gallery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvcOfSBrEj_1MJyGb-Qt78kWbMX-d4eBJnjNkmUGvKQO56lvrRi2oSplZwsRsRp9u46As7hIyQ1rM7SJkEnbIcptyjWTBDuSP-GrE2fya-Z3G3T0nbr4zNx_FCnfiWkOjlX0yOGihkWZ_jJePrfo7ite-PMC1lIALwcQ47nhcQecUvri5iGIWlfSXUnU0bT5q2uFGEUFset5EaBIXP-pWvgaVKn6G7P4pH5LK7kt8NsZk_SgAzE7vokM7TmDj6MpxmiY3knXaJsac"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-bold">124</span>
+</div>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="serif-text text-xl font-bold text-on-surface">Fragile Equilibrium</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest">Sculpture</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">By Sofia Chen</p>
+<div class="flex justify-between items-center bg-surface-container-low p-4 rounded-xl">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Reserve Price</p>
+<p class="text-lg font-bold text-on-surface">3.20 ETH</p>
+</div>
+<button class="bg-primary-container/20 text-primary hover:bg-primary hover:text-on-primary p-2.5 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined">bid_landscape</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 (Tall/Asymmetric) -->
+<div class="group cursor-pointer md:mt-12">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container mb-6 shadow-sm group-hover:shadow-2xl transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Impressionist landscape painting of a sun-drenched lavender field at dawn with soft violet and peach sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfpZCecyxNzSM8Q1bipLzDiumRT_FMh-Rlf5EqTSsaF-dsplvQRwdFvlcS2Jf9P1kOPf02_TVrRv8qd_UEg7zvz4XtOfM2A0fM11ZsR4SNd1v139LeWSuhSetC-s1RUn06NgqLzJ-MhyLQIi6v6ZlF6IalBzAsw1iyfIEqGEo7i69Wwpw37P1SqdOfXu1qTwUDX_fEhAx6QGBtA2j8rAoiRRD85WHpda4QvUw4SCHVS3OA24zLP2r09MSVviGBjagFPjNrQVtlfO0"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-bold">482</span>
+</div>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="serif-text text-xl font-bold text-on-surface">Lavender Solace</h3>
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest">Painting</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">By Marcus Thorne</p>
+<div class="flex justify-between items-center bg-surface-container-low p-4 rounded-xl">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Current Bid</p>
+<p class="text-lg font-bold text-on-surface">8.15 ETH</p>
+</div>
+<button class="bg-primary-container/20 text-primary hover:bg-primary hover:text-on-primary p-2.5 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined">bid_landscape</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container mb-6 shadow-sm group-hover:shadow-2xl transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Digital surrealist portrait of a person with geometric floral patterns emerging from their silhouette, ethereal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2OtxWqBHX817OP8IOyya1g79K7NV1tl9CodkNoPuWaV-GIVdZSa4gYKf573q9aWhPZfrMqlwkWmvjiKBpqHARUarr4JROdIuPxs7mi73WAgjRUEAawp-zRyqmxryjq4ms_EqQMri0k59tzoL5mRyMCwwBV4hBBwdyOm-QFFFkyLdYZ8yVLm07DFfwwxKojs8eLIWQT007df54V92GyqKkejy6I-CCgiuIklhZNqi6bmzQGo1oLW-oAOK86SNrMbhDgKnJIYeL5EY"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-bold">95</span>
+</div>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="serif-text text-xl font-bold text-on-surface">Organic Algorithm</h3>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest">Digital Art</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">By Elena Rossi</p>
+<div class="flex justify-between items-center bg-surface-container-low p-4 rounded-xl">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Starting At</p>
+<p class="text-lg font-bold text-on-surface">1.50 ETH</p>
+</div>
+<button class="bg-primary-container/20 text-primary hover:bg-primary hover:text-on-primary p-2.5 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined">bid_landscape</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curator Spotlight (Asymmetric Layout) -->
+<section class="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7 relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl z-0"></div>
+<div class="relative z-10 grid grid-cols-2 gap-6">
+<div class="space-y-6">
+<div class="rounded-xl overflow-hidden aspect-square shadow-xl rotate-[-2deg]">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a female art curator with glasses in a modern bright studio, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMZnHJ9G1CgOY3D7vwcUvlMhqRgc9UQu-sLDY37zCwUYK_zFP2Mqxy2YFjxdxm37U5cG61EtFW28D3aS2exz8WGjLhXvfTAKwLNIHcaz6XolxmOPCnXyuMUlvYiVnhWesHdInZiXSMR8VExEFtR0zOlTjv4CaIspvg_mT08Q5b08yYzXiK3hSRxB0hpuDUh9fP0mm23aMlAEsp4Rptkx9vBwUNuWW1Nu1rsUUx8NFU1igABxnbKSNHN-seODBzVSyI_1Npn6LWK3s"/>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary italic serif-text text-lg text-on-surface">
+                            "Art is the bridge between the seen and the felt. Our mission is to make that bridge accessible to everyone."
+                        </div>
+</div>
+<div class="mt-12 space-y-6">
+<div class="rounded-xl overflow-hidden aspect-[3/4] shadow-xl rotate-[3deg]">
+<img class="w-full h-full object-cover" data-alt="A woman in a gallery looking at a large abstract canvas, sunlight streaming through high windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA52M2u9CBQuRZzAy8cqcfd22TlBnAEH_4pISfq4eyaZlxb8ot1RXqGCv6h6IHOl7k1nWDXRJJQ9BnU6RiDaaNE3v7wNMXilaLpfr44kbWiU1Vja5yE86Va6WEENp0MM1268HGf-3Ewsz8zINlV1Q1e-IEeBMJbjuFlC91SR3w6OSUshwqyFFXNYnBbHd2XJ9-1UL8KSGw_uOaECEHChnzCqQFy9wI6i3o8uB_zM2aWJoIYQBSZ-Ik2BpkltwMsJD2n3kcYm8DmZjg"/>
+</div>
+<div class="bg-tertiary-container/30 p-6 rounded-xl text-center">
+<p class="text-3xl font-bold text-tertiary mb-1 serif-text">15+</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-tertiary-container">Years Curating</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<h4 class="text-primary font-bold tracking-[0.2em] uppercase mb-4 text-sm">Curator Spotlight</h4>
+<h2 class="serif-text text-5xl font-bold text-on-surface leading-tight mb-8">Meet Beatrice Vane, The Visionary Behind 'Daylight'</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                    Beatrice has spent nearly two decades discovering emergent talent in the European contemporary scene. Her latest selection for Masterpiece Market focuses on "Optimistic Curation"—pieces that celebrate resilience and light.
+                </p>
+<div class="space-y-6 mb-10">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Expert Vetting</h5>
+<p class="text-sm text-on-surface-variant">Every piece in Beatrice's collection undergoes a rigorous physical and digital provenance check.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary">auto_awesome</span>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Market Insights</h5>
+<p class="text-sm text-on-surface-variant">Gain access to exclusive collector notes and market trend forecasts curated by Beatrice herself.</p>
+</div>
+</div>
+</div>
+<button class="group flex items-center gap-3 text-on-surface font-bold text-lg">
+                    Read the Full Interview
+                    <div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[2rem] mt-20 bg-[#eeeeea] text-on-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-[1920px] mx-auto">
+<div class="space-y-4 text-center md:text-left">
+<p class="font-['Noto_Serif'] text-lg font-bold text-[#303330]">Masterpiece Market</p>
+<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60">© 2024 Masterpiece Market. The Daylight Gallery.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-[#303330]/60 hover:text-[#a53d12] font-['Plus_Jakarta_Sans'] text-sm tracking-wide transition-colors duration-200" href="#">About</a>
+<a class="text-[#303330]/60 hover:text-[#a53d12] font-['Plus_Jakarta_Sans'] text-sm tracking-wide transition-colors duration-200" href="#">Auction Rules</a>
+<a class="text-[#303330]/60 hover:text-[#a53d12] font-['Plus_Jakarta_Sans'] text-sm tracking-wide transition-colors duration-200" href="#">Provenance</a>
+<a class="text-[#303330]/60 hover:text-[#a53d12] font-['Plus_Jakarta_Sans'] text-sm tracking-wide transition-colors duration-200" href="#">Privacy</a>
+<a class="text-[#303330]/60 hover:text-[#a53d12] font-['Plus_Jakarta_Sans'] text-sm tracking-wide transition-colors duration-200" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">public</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Floating Bid FAB (Suppressed based on system instructions, but for visual completeness on Home, using primary intent) -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="bg-primary text-on-primary h-16 w-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group overflow-hidden">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-bold pl-0 group-hover:pl-2">Sell Art</span>
+</button>
+</div>
+</body></html>

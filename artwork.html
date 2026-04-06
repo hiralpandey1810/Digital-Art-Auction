@@ -1,0 +1,330 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "inverse-primary": "#fe7e4f",
+                  "on-tertiary-fixed": "#362459",
+                  "inverse-on-surface": "#9d9d9a",
+                  "background": "#faf9f6",
+                  "primary-fixed": "#ffad91",
+                  "on-error": "#fff7f6",
+                  "outline": "#797b78",
+                  "surface-dim": "#d9dbd6",
+                  "on-tertiary": "#fef7ff",
+                  "on-background": "#303330",
+                  "secondary": "#0e6781",
+                  "surface-variant": "#e1e3df",
+                  "on-surface-variant": "#5d605c",
+                  "tertiary-container": "#d6beff",
+                  "on-surface": "#303330",
+                  "surface-container-highest": "#e1e3df",
+                  "tertiary-fixed-dim": "#c8b1f0",
+                  "on-primary-fixed": "#4d1400",
+                  "primary-fixed-dim": "#ff9974",
+                  "on-secondary": "#f2faff",
+                  "error": "#ac3434",
+                  "surface-tint": "#a53d12",
+                  "on-tertiary-container": "#4b386e",
+                  "on-error-container": "#65000b",
+                  "error-dim": "#70030f",
+                  "primary-container": "#ffad91",
+                  "on-secondary-fixed": "#004558",
+                  "on-secondary-fixed-variant": "#04647d",
+                  "on-primary-fixed-variant": "#7f2700",
+                  "surface-bright": "#faf9f6",
+                  "surface-container-lowest": "#ffffff",
+                  "on-primary-container": "#702100",
+                  "primary-dim": "#953205",
+                  "secondary-fixed-dim": "#97defc",
+                  "tertiary-dim": "#5c4981",
+                  "surface": "#faf9f6",
+                  "surface-container-high": "#e8e8e4",
+                  "primary": "#a53d12",
+                  "outline-variant": "#b1b2af",
+                  "surface-container-low": "#f4f4f0",
+                  "tertiary-fixed": "#d6beff",
+                  "inverse-surface": "#0d0f0d",
+                  "error-container": "#f56965",
+                  "tertiary": "#69558e",
+                  "secondary-container": "#baeaff",
+                  "secondary-fixed": "#baeaff",
+                  "surface-container": "#eeeeea",
+                  "on-secondary-container": "#005971",
+                  "on-primary": "#fff7f5",
+                  "on-tertiary-fixed-variant": "#544178",
+                  "secondary-dim": "#005b72"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Noto Serif"],
+                  "body": ["Plus Jakarta Sans"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-panel {
+      background: rgba(250, 249, 246, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    body {
+      background-color: #faf9f6;
+      color: #303330;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Navigation Shell -->
+<nav class="sticky top-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-2xl dark:bg-[#303330]/80 shadow-xl shadow-[#303330]/5">
+<div class="flex items-center justify-between px-8 py-4 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-['Noto_Serif'] font-bold text-[#a53d12] dark:text-[#ffad91] italic text-2xl tracking-tight" href="#">Masterpiece Market</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Explore</a>
+<a class="text-[#a53d12] font-semibold border-b-2 border-[#a53d12] pb-1" href="#">Auctions</a>
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Artists</a>
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 w-64 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search artworks..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">notifications</button>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">shopping_bag</button>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold hover:scale-[1.02] hover:shadow-lg transition-all duration-300 active:scale-95">Connect Wallet</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-[1920px] mx-auto px-8 py-12">
+<!-- Breadcrumb -->
+<nav class="mb-12 flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Marketplace</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Digital Art</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface">Ethereal Resonance</span>
+</nav>
+<!-- Hero Content: Asymmetrical Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-32">
+<!-- Left: Artwork Preview -->
+<div class="lg:col-span-7 relative group">
+<div class="bg-surface-container-low rounded-[2rem] p-4 lg:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+<img alt="Ethereal Resonance" class="w-full aspect-[4/5] object-cover rounded-[1.5rem] shadow-xl" data-alt="A mesmerizing digital painting titled Ethereal Resonance featuring flowing abstract shapes in coral, lavender, and gold with luminous textures and depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09NvCeHewcnUoyWjwtcPCiTCMZNNXcNr2Iof8BzZAqvYJI0M1wAmVUkhJ9LHJ6J8_d4C6tGTLmdhaKgOGJtXgmlBDXE7WdOqOocmaVfAVDQDUWxWvUiWE_aF71AVMHQlsSpD9jJlPpM2WJ3IiEl8QuTY7u5p7bsAYvrtkCdNv83khrhy-Dl46tGoKmJqWz_8KsTyl2G4HTIKxSqarWEg6Y98WoWtxJwK572zpqyqGKYhFBATYV1ArZb2vaVUjrPar6S-z4Q7B5wU"/>
+</div>
+<!-- Artist Badge Floating -->
+<div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-2xl flex items-center gap-4 shadow-xl border border-white/20">
+<img alt="Julian Sterling" class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of Julian Sterling, a contemporary digital artist with a thoughtful expression in a bright minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Pl1ACOvvzj2LsG22WNwIKAhjgB5z4RqoK06q8tmQpN0FzR_UTMTV-HDu4hh-l1qi1WErQbO9CRB5COfd-DL-uhTjFGizoWkJbLb_QIx2YyuOk9-YVE1StuMlu6dt6TT12mgmbLsrGSj_TiuhLlEXsH3eQGvgg6WF2Vqzf7UHf-tSyu4zNnargX13yAJe1m2Tb-XGljoZlcMOYRVaeptSB7A3fya_u7Fj2kqXzSXju4MeWg-sOETlmURQNsvYIv1nsVJsxbmn3tE"/>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-0.5">Created By</p>
+<p class="font-headline font-bold text-xl">Julian Sterling</p>
+</div>
+</div>
+</div>
+<!-- Right: Bid & Info Panel -->
+<div class="lg:col-span-5 lg:sticky lg:top-32 flex flex-col gap-8">
+<header>
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
+              LIVE NOW
+            </span>
+<span class="text-on-surface-variant text-sm font-medium">Series 1 of 1</span>
+</div>
+<h1 class="font-headline text-5xl lg:text-7xl font-bold tracking-tight mb-6">Ethereal Resonance</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body max-w-xl">
+            A visceral exploration of memory and frequency. Julian Sterling's masterwork utilizes generative algorithms to map emotional peaks into a fluid, ethereal landscape of light and texture.
+          </p>
+</header>
+<!-- Bidding Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 shadow-2xl shadow-on-surface/5 border border-outline-variant/10">
+<div class="grid grid-cols-2 gap-8 mb-8">
+<div class="space-y-1">
+<p class="text-on-surface-variant text-sm font-semibold tracking-wide">Current Bid</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold text-on-surface">14.85 ETH</p>
+<p class="text-on-surface-variant font-medium">($32,104.20)</p>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-on-surface-variant text-sm font-semibold tracking-wide">Ending In</p>
+<p class="text-4xl font-bold text-on-surface tabular-nums">12:32:18</p>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] hover:shadow-xl transition-all duration-300 active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+              Place Your Bid
+            </button>
+<div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant px-2 uppercase tracking-tighter">
+<span>Min. bid increment: 0.15 ETH</span>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+                Auction Rules
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Metadata Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-2xl">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Contract Address</p>
+<p class="text-sm font-medium truncate">0x742d...44e</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-2xl">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">Token Standard</p>
+<p class="text-sm font-medium">ERC-721</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Content: Bid History & Artist More -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Bid History -->
+<section class="lg:col-span-5">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-3xl font-bold italic">Bid History</h2>
+<button class="text-primary font-bold text-sm hover:underline">View All</button>
+</div>
+<div class="space-y-2">
+<!-- History Item -->
+<div class="bg-white flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-4">
+<img alt="Bidder 1" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Profile avatar of a digital art collector with a minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y2CTAnwKOxiWDz5bC1NgAzPlVu_4Aa0UVKGOEkECWmCiprcJLSHkYmg9kdeHTmNKkI4uR9Hjdn2xE9TWbo5YpF-f8DKv8j-i_Vg-ayCl7KNnSBBEjw8vLKGn03tiJba5O5eCDBeM8sK8PXB3hgR6JpDF_HKF0oXrvgWQTp-MWbOZV6TJs5TXTPouSiGOL7U1thbb2UbL6k0BN_K9KLx_L2_p2YQTyco7mU_gLbjQmz3Ndl0HHT90_t3XNCZuDYAYi30JoQGZ0Oc"/>
+<div>
+<p class="font-bold text-sm">curator_0x1</p>
+<p class="text-on-surface-variant text-xs">2 minutes ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">14.85 ETH</p>
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Active Bid</p>
+</div>
+</div>
+<!-- History Item -->
+<div class="bg-white flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-4">
+<img alt="Bidder 2" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Abstract colorful profile avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCVSCKnZfKSWYN81pW--LgJ0wGMrhYT75Cm3i1pqfSlSGkZmOWgHqjQc_yK54a_KDLbIqbyRl0NB45kIf1eJfxaGGc0PkCH_GQesZRSFivtEAAT52Kmz-iwG106r766vmQv6PJtpCECMFVF-n8KSP22hbfcj_J53lqDWDP89t0YymsGr375yeONrPcGfbIFu4noLC_cnY0c7c8IzR7himpgdY4Do9VN4GHgkgD7sqjRXTFQXui0IEtKeqVtZnu8IqPwocJovn5-I"/>
+<div>
+<p class="font-bold text-sm">seraphim.eth</p>
+<p class="text-on-surface-variant text-xs">15 minutes ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">14.50 ETH</p>
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Outbid</p>
+</div>
+</div>
+<!-- History Item -->
+<div class="bg-white flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-4">
+<img alt="Bidder 3" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Monochromatic stylish profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKHu7Qzes-H9M36B_CDRddImuoPkYjdcnA-TD4c4i8b9R37MpWoC_CMWHSdbC61qXJSmU-5_5rBTjVbzgyWhcGaRmmr4X_96z5Iz3lM0NAEKd_Dc7Enqm7Jyo44Fv_qr9n1ym5SS2mp2mFaVjmsmYEHVh7o0hlfG_R254YvP_B_Yt91PcAZJxEVhp1SUi4ztVRYtg63fM-AU7tmSJGIGyPcnGRTklxBt5HapPix8Nj1NKHt-13JeOhXiF3yhufNkCEuccYDa09ArY"/>
+<div>
+<p class="font-bold text-sm">vault_walker</p>
+<p class="text-on-surface-variant text-xs">42 minutes ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">14.10 ETH</p>
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Outbid</p>
+</div>
+</div>
+</div>
+</section>
+<!-- More from Artist -->
+<section class="lg:col-span-7">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-3xl font-bold italic">More from Julian Sterling</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group cursor-pointer">
+<div class="bg-white p-3 rounded-[1.5rem] mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
+<img alt="Luminous Void" class="w-full aspect-square object-cover rounded-xl" data-alt="Abstract digital artwork with deep blues and brilliant gold highlights in a swirling motion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcimUiJEPly1V7RF4jnP_JNRPvTg2jvJSRIAgU0IIzSrtjqtGyh99-xcOaC2E5LysOr_mwjmNZ_YRU5LEkPWiZJEBMivcfgCXeHiZTjQ3C-g_ZX41P9r1Gfr3OTCi3QN_GRSOC3J3CQXxYZVDksCqPQanJO0j_r5YPGj8H5jutgrBzXs8Y8PdcRZjKRgzNVFCKkmAEWJRRpwdfVzAaCvRihYf4chpO-1gwzMCV3DKRmDKs8N9oOD9Vbhk7Dcb6lOotC68vDaY4Kts"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-headline font-bold text-xl group-hover:text-primary transition-colors">Luminous Void</p>
+<p class="text-on-surface-variant text-sm">Edition of 10</p>
+</div>
+<div class="text-right">
+<p class="font-bold">4.2 ETH</p>
+<p class="text-on-surface-variant text-xs">Floor Price</p>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-white p-3 rounded-[1.5rem] mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
+<img alt="Chromatic Drift" class="w-full aspect-square object-cover rounded-xl" data-alt="Fluid digital painting with vibrant rainbow streaks across a misty white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaUa59K7pR5X5oAygCZywMrcde0eC4-3t66X1I2Fo9H17iZlMYq3t-tuYBXH0FImw0h0RroluDlE742b07QkHA4gFeXwSENv2len2Ff49TL8GBI2RWXmwkIyoamNVqUvmTGkCSuWQd8u0M8qf6ipI-za4uJv4t9eP5VpRfzkNiIo5GwJZVNpTXKf_s2Xkd07H88jjQP6ZjTj6-fMJfeV_j_aZBFgL4E6OrXZAJ0UxCsG43pZSp5oiJfdV0VQIpD5TTIHYILeWf84A"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-headline font-bold text-xl group-hover:text-primary transition-colors">Chromatic Drift</p>
+<p class="text-on-surface-variant text-sm">Series 2 of 5</p>
+</div>
+<div class="text-right">
+<p class="font-bold">8.9 ETH</p>
+<p class="text-on-surface-variant text-xs">Highest Bid</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="w-full rounded-t-[2rem] mt-20 bg-[#eeeeea] dark:bg-[#1a1c1a]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-[1920px] mx-auto">
+<div class="space-y-4 text-center md:text-left">
+<p class="font-['Noto_Serif'] text-lg font-bold text-[#303330] dark:text-white">Masterpiece Market</p>
+<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60">© 2024 Masterpiece Market. The Daylight Gallery.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">About</a>
+<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Auction Rules</a>
+<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Provenance</a>
+<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Privacy</a>
+<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

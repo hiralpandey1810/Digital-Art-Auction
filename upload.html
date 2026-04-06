@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forge Your Masterpiece | Masterpiece Market</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#fe7e4f",
+                        "on-tertiary-fixed": "#362459",
+                        "inverse-on-surface": "#9d9d9a",
+                        "background": "#faf9f6",
+                        "primary-fixed": "#ffad91",
+                        "on-error": "#fff7f6",
+                        "outline": "#797b78",
+                        "surface-dim": "#d9dbd6",
+                        "on-tertiary": "#fef7ff",
+                        "on-background": "#303330",
+                        "secondary": "#0e6781",
+                        "surface-variant": "#e1e3df",
+                        "on-surface-variant": "#5d605c",
+                        "tertiary-container": "#d6beff",
+                        "on-surface": "#303330",
+                        "surface-container-highest": "#e1e3df",
+                        "tertiary-fixed-dim": "#c8b1f0",
+                        "on-primary-fixed": "#4d1400",
+                        "primary-fixed-dim": "#ff9974",
+                        "on-secondary": "#f2faff",
+                        "error": "#ac3434",
+                        "surface-tint": "#a53d12",
+                        "on-tertiary-container": "#4b386e",
+                        "on-error-container": "#65000b",
+                        "error-dim": "#70030f",
+                        "primary-container": "#ffad91",
+                        "on-secondary-fixed": "#004558",
+                        "on-secondary-fixed-variant": "#04647d",
+                        "on-primary-fixed-variant": "#7f2700",
+                        "surface-bright": "#faf9f6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#702100",
+                        "primary-dim": "#953205",
+                        "secondary-fixed-dim": "#97defc",
+                        "tertiary-dim": "#5c4981",
+                        "surface": "#faf9f6",
+                        "surface-container-high": "#e8e8e4",
+                        "primary": "#a53d12",
+                        "outline-variant": "#b1b2af",
+                        "surface-container-low": "#f4f4f0",
+                        "tertiary-fixed": "#d6beff",
+                        "inverse-surface": "#0d0f0d",
+                        "error-container": "#f56965",
+                        "tertiary": "#69558e",
+                        "secondary-container": "#baeaff",
+                        "secondary-fixed": "#baeaff",
+                        "surface-container": "#eeeeea",
+                        "on-secondary-container": "#005971",
+                        "on-primary": "#fff7f5",
+                        "on-tertiary-fixed-variant": "#544178",
+                        "secondary-dim": "#005b72"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(250, 249, 246, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-2xl dark:bg-[#303330]/80 shadow-xl shadow-[#303330]/5">
+<div class="flex items-center justify-between px-8 py-4 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-['Noto_Serif'] font-bold text-[#a53d12] dark:text-[#ffad91] italic text-2xl tracking-tight">Masterpiece Market</span>
+<div class="hidden md:flex gap-6">
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Explore</a>
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Auctions</a>
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Artists</a>
+<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant">shopping_bag</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-xl font-semibold hover:scale-[1.02] hover:shadow-lg transition-all duration-300">
+                    Connect Wallet
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Header Section -->
+<header class="mb-16 text-center md:text-left">
+<h1 class="text-5xl md:text-6xl font-bold text-on-surface tracking-tight leading-tight">Forge Your Masterpiece</h1>
+<p class="mt-4 text-xl text-on-surface-variant max-w-2xl font-body">Share your creative vision with the world. Our Daylight Gallery ensures your work is presented with the reverence it deserves.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Upload Form -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Drag and Drop Zone -->
+<section class="relative group">
+<div class="w-full h-96 rounded-[2rem] bg-surface-container-low border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center transition-all duration-300 hover:bg-secondary-container/20 group-hover:border-primary/50 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary-container/10 to-primary-container/10 opacity-50"></div>
+<div class="relative z-10 text-center px-8">
+<div class="mb-6 inline-flex items-center justify-center w-20 h-20 rounded-full bg-surface-container-lowest shadow-xl shadow-on-surface/5">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-2">Manifest Your Art</h3>
+<p class="text-on-surface-variant mb-6">Drag and drop high-resolution files (PNG, JPG, or SVG up to 50MB)</p>
+<button class="px-8 py-3 bg-surface-container-lowest text-primary font-bold rounded-xl shadow-sm hover:shadow-md transition-all active:scale-95">
+                                Select from Device
+                            </button>
+</div>
+</div>
+</section>
+<!-- Form Fields -->
+<section class="space-y-8">
+<div class="space-y-6">
+<div class="group">
+<label class="block text-sm font-label font-semibold text-on-surface-variant mb-2 ml-1">Masterpiece Title</label>
+<input class="w-full bg-surface-variant/40 border-0 border-b-2 border-transparent focus:ring-0 focus:border-primary px-4 py-4 rounded-t-xl font-body text-lg transition-all placeholder:text-outline-variant" placeholder="e.g. Whispers of the Golden Hour" type="text"/>
+</div>
+<div class="group">
+<label class="block text-sm font-label font-semibold text-on-surface-variant mb-2 ml-1">Artist's Statement</label>
+<textarea class="w-full bg-surface-variant/40 border-0 border-b-2 border-transparent focus:ring-0 focus:border-primary px-4 py-4 rounded-t-xl font-body text-lg transition-all placeholder:text-outline-variant resize-none" placeholder="Describe the soul behind this work..." rows="4"></textarea>
+</div>
+</div>
+<!-- Auction Protocol -->
+<div class="p-8 rounded-[2rem] bg-surface-container">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-tertiary" data-icon="gavel">gavel</span>
+<h2 class="text-2xl font-headline font-bold">Auction Protocol</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface-variant mb-2 ml-1">Starting Bid (ETH)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-0 px-4 py-4 rounded-xl font-body text-lg shadow-sm focus:ring-2 focus:ring-primary/20" placeholder="0.50" step="0.01" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 font-bold text-outline">Ξ</span>
+</div>
+</div>
+<div>
+<label class="block text-sm font-label font-semibold text-on-surface-variant mb-2 ml-1">Auction Duration</label>
+<select class="w-full bg-surface-container-lowest border-0 px-4 py-4 rounded-xl font-body text-lg shadow-sm focus:ring-2 focus:ring-primary/20">
+<option>24 Hours</option>
+<option>3 Days</option>
+<option selected="">7 Days</option>
+<option>14 Days</option>
+</select>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-4 pt-4">
+<button class="px-8 py-4 text-on-surface font-semibold hover:bg-surface-container-high rounded-xl transition-all">Save Draft</button>
+<button class="px-12 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">Initialize Auction</button>
+</div>
+</section>
+</div>
+<!-- Right Column: Live Gallery Preview -->
+<div class="lg:col-span-5 lg:sticky lg:top-32">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between px-2">
+<h3 class="text-xl font-headline font-bold text-on-surface">Live Gallery Preview</h3>
+<span class="flex items-center gap-2 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                            Live Sync
+                        </span>
+</div>
+<!-- The Preview Card -->
+<div class="group bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-2xl shadow-on-surface/5 transition-all duration-500 hover:shadow-primary/10 border border-outline-variant/10">
+<div class="relative aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="abstract oil painting with vibrant warm tones of coral and orange mixed with soft cream and teal brushstrokes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJXst4i9z1x7RkxpSg8ULB2WS4Is0wOtr2UIRR0bbrubdPl5gHzVTq7oUtOdwy97L3rZxUOMnDY4LrpF2VSBlNKTPITHvwTT05V32Jz_PcQzcer267V0LxGtZMaFzv3ud1XIZKpa9n2N6liBiRnp6nXrMZ7ildf4TFtBVo0QNHlbir6DvbwH3JEhRnflgkF77F-vVl6zYSs-gg23tyjCx31CxT-JXyUyR6Q0u04UgVdhZMxCYRdapJ299_aCg5TomGzzgH3CWhwg"/>
+<!-- Bidding Overlay (Glassmorphism) -->
+<div class="absolute bottom-6 left-6 right-6 glass-panel rounded-2xl p-5 flex items-center justify-between">
+<div>
+<p class="text-[10px] font-label font-bold uppercase tracking-widest text-on-surface-variant">Reserve Price</p>
+<p class="text-2xl font-bold text-primary">0.50 ETH</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-label font-bold uppercase tracking-widest text-on-surface-variant">Ending In</p>
+<p class="text-xl font-headline font-bold">7d 00h 00m</p>
+</div>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface">
+<img class="w-full h-full object-cover" data-alt="portrait of a confident female digital artist with short dark hair in a bright sunlit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe4e8401q-SV6KeiYjT4Hj9QCBoVbQShcP1Jfy63IWbv_wA6_1VJ_QM0GSDQhNb1SUGBKh8QBiYGVqoNwL9vLTdw3Qbl2_7nMluENa0qywnxnntoPOrhwciwTmong2cJcc4sDTYdT4xVI-1ANO3Jcr7AXzLjWdddNTLwQlRPH4rQHn3M0jWmbo2iWfSRsVjvKjZZ_nHTtwoYYnSeVCCWYNavTQXGcmr9IcQSu8LB14LL7mu_Wfp9JRuKN25ei7-Ikfvx1meN13T08"/>
+</div>
+<span class="text-sm font-label font-semibold text-on-surface-variant">Curated by @artist_name</span>
+</div>
+<h2 class="text-3xl font-headline font-bold text-on-surface">Whispers of the Golden Hour</h2>
+<p class="text-on-surface-variant font-body line-clamp-2">This piece explores the transient moments between day and night, where colors bleed into one another and reality feels suspended in a warm, ethereal glow...</p>
+<div class="pt-4 flex items-center justify-between border-t border-outline-variant/10">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container border-2 border-surface flex items-center justify-center text-[10px] font-bold">JD</div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container border-2 border-surface flex items-center justify-center text-[10px] font-bold">ML</div>
+<div class="w-8 h-8 rounded-full bg-primary-container border-2 border-surface flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+<span class="text-sm font-label font-medium text-outline">Watching this piece</span>
+</div>
+</div>
+</div>
+<!-- Editorial Tip Card -->
+<div class="bg-secondary-container/30 p-6 rounded-3xl border border-secondary-container/50">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="lightbulb">lightbulb</span>
+<div>
+<h4 class="font-bold text-on-secondary-container">Pro Tip</h4>
+<p class="text-sm text-on-secondary-container/80 mt-1">High-contrast previews often attract 40% more engagement. Try capturing your art under natural daylight.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[2rem] mt-20 bg-[#eeeeea] dark:bg-[#1a1c1a]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-['Noto_Serif'] text-lg font-bold text-[#303330] dark:text-white">Masterpiece Market</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60">© 2024 Masterpiece Market. The Daylight Gallery.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200" href="#">About</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Auction Rules</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Provenance</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Privacy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
