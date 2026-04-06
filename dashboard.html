@@ -7,98 +7,100 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-primary": "#fe7e4f",
-                    "on-tertiary-fixed": "#362459",
-                    "inverse-on-surface": "#9d9d9a",
-                    "background": "#faf9f6",
-                    "primary-fixed": "#ffad91",
-                    "on-error": "#fff7f6",
-                    "outline": "#797b78",
-                    "surface-dim": "#d9dbd6",
-                    "on-tertiary": "#fef7ff",
-                    "on-background": "#303330",
-                    "secondary": "#0e6781",
-                    "surface-variant": "#e1e3df",
-                    "on-surface-variant": "#5d605c",
-                    "tertiary-container": "#d6beff",
-                    "on-surface": "#303330",
-                    "surface-container-highest": "#e1e3df",
-                    "tertiary-fixed-dim": "#c8b1f0",
-                    "on-primary-fixed": "#4d1400",
-                    "primary-fixed-dim": "#ff9974",
-                    "on-secondary": "#f2faff",
-                    "error": "#ac3434",
-                    "surface-tint": "#a53d12",
-                    "on-tertiary-container": "#4b386e",
-                    "on-error-container": "#65000b",
-                    "error-dim": "#70030f",
-                    "primary-container": "#ffad91",
-                    "on-secondary-fixed": "#004558",
-                    "on-secondary-fixed-variant": "#04647d",
-                    "on-primary-fixed-variant": "#7f2700",
-                    "surface-bright": "#faf9f6",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-container": "#702100",
-                    "primary-dim": "#953205",
-                    "secondary-fixed-dim": "#97defc",
-                    "tertiary-dim": "#5c4981",
-                    "surface": "#faf9f6",
-                    "surface-container-high": "#e8e8e4",
-                    "primary": "#a53d12",
-                    "outline-variant": "#b1b2af",
-                    "surface-container-low": "#f4f4f0",
-                    "tertiary-fixed": "#d6beff",
-                    "inverse-surface": "#0d0f0d",
-                    "error-container": "#f56965",
-                    "tertiary": "#69558e",
-                    "secondary-container": "#baeaff",
-                    "secondary-fixed": "#baeaff",
-                    "surface-container": "#eeeeea",
-                    "on-secondary-container": "#005971",
-                    "on-primary": "#fff7f5",
-                    "on-tertiary-fixed-variant": "#544178",
-                    "secondary-dim": "#005b72"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#fe7e4f",
+                        "on-tertiary-fixed": "#362459",
+                        "inverse-on-surface": "#9d9d9a",
+                        "background": "#faf9f6",
+                        "primary-fixed": "#ffad91",
+                        "on-error": "#fff7f6",
+                        "outline": "#797b78",
+                        "surface-dim": "#d9dbd6",
+                        "on-tertiary": "#fef7ff",
+                        "on-background": "#303330",
+                        "secondary": "#0e6781",
+                        "surface-variant": "#e1e3df",
+                        "on-surface-variant": "#5d605c",
+                        "tertiary-container": "#d6beff",
+                        "on-surface": "#303330",
+                        "surface-container-highest": "#e1e3df",
+                        "tertiary-fixed-dim": "#c8b1f0",
+                        "on-primary-fixed": "#4d1400",
+                        "primary-fixed-dim": "#ff9974",
+                        "on-secondary": "#f2faff",
+                        "error": "#ac3434",
+                        "surface-tint": "#a53d12",
+                        "on-tertiary-container": "#4b386e",
+                        "on-error-container": "#65000b",
+                        "error-dim": "#70030f",
+                        "primary-container": "#ffad91",
+                        "on-secondary-fixed": "#004558",
+                        "on-secondary-fixed-variant": "#04647d",
+                        "on-primary-fixed-variant": "#7f2700",
+                        "surface-bright": "#faf9f6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#702100",
+                        "primary-dim": "#953205",
+                        "secondary-fixed-dim": "#97defc",
+                        "tertiary-dim": "#5c4981",
+                        "surface": "#faf9f6",
+                        "surface-container-high": "#e8e8e4",
+                        "primary": "#a53d12",
+                        "outline-variant": "#b1b2af",
+                        "surface-container-low": "#f4f4f0",
+                        "tertiary-fixed": "#d6beff",
+                        "inverse-surface": "#0d0f0d",
+                        "error-container": "#f56965",
+                        "tertiary": "#69558e",
+                        "secondary-container": "#baeaff",
+                        "secondary-fixed": "#baeaff",
+                        "surface-container": "#eeeeea",
+                        "on-secondary-container": "#005971",
+                        "on-primary": "#fff7f5",
+                        "on-tertiary-fixed-variant": "#544178",
+                        "secondary-dim": "#005b72"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": [ "Noto Serif" ],
+                        "body": [ "Plus Jakarta Sans" ],
+                        "label": [ "Plus Jakarta Sans" ]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": [ "Noto Serif" ],
-                    "body": [ "Plus Jakarta Sans" ],
-                    "label": [ "Plus Jakarta Sans" ]
-            }
-          },
-        },
-      }
+        }
     </script>
 <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #faf9f6; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .glass-panel { background: rgba(250, 249, 246, 0.8); backdrop-filter: blur(20px); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tooltip { visibility: hidden; opacity: 0; transition: opacity 0.2s ease-in-out; }
+        .has-tooltip:hover .tooltip { visibility: visible; opacity: 1; }
     </style>
 </head>
 <body class="text-on-surface">
-<!-- TopNavBar -->
-<nav class="sticky top-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-2xl shadow-xl shadow-[#303330]/5 transition-all duration-300">
-<div class="flex items-center justify-between px-8 py-4 max-w-[1920px] mx-auto">
+<!-- TopNavBar (Shared Component) -->
+<nav class="sticky top-0 w-full z-50 bg-[#faf9f6] dark:bg-stone-900 shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
 <div class="flex items-center gap-8">
-<span class="font-['Noto_Serif'] font-bold text-[#a53d12] italic text-2xl tracking-tight">Masterpiece Market</span>
-<div class="hidden md:flex items-center gap-6">
-<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Explore</a>
-<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Auctions</a>
-<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Artists</a>
-<a class="text-[#303330]/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Journal</a>
+<span class="text-2xl font-serif font-bold text-[#a53d12] dark:text-[#ffad91] italic tracking-tight">Masterpiece Market</span>
+<div class="hidden md:flex items-center gap-6 font-serif text-stone-800 dark:text-stone-100">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#a53d12] hover:scale-[1.02] transition-all" href="#">Home</a>
+<a class="text-[#a53d12] border-b-2 border-[#a53d12] font-bold hover:scale-[1.02] transition-all" href="#">Dashboard</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#a53d12] hover:scale-[1.02] transition-all" href="#">Upload</a>
 </div>
 </div>
 <div class="flex items-center gap-6">
@@ -109,8 +111,9 @@
 <div class="flex items-center gap-4">
 <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
 <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">shopping_bag</button>
-<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-container">
-<img class="w-full h-full object-cover" data-alt="Portrait of a stylish middle-aged man with short hair and a clean-shaven face in soft natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYC5JJNfRwUwmq3B4QxLLs3RKhWnzt_1xWEUrylajArUcQjCzxU9FCs9RQwVbS1Ii6eDSB6EkXguDTLxDpGu-Qed6ETLMB7TKRUkJhJZO4Uswamzi7ZccL1gGYvRETdNT-vXlr_UqW5jlLLHvzb9Y1JOI89D2sHLi6N3sjllmQ2YHMBTO7IYFZwOQHkCzeA7A_K2n_f2q0J_v6Go4DrPjb5PM0-oagismtQ2uJa4rZzrw4AwGLWNBBtJ1PDubHSS4SQAWpjyq4x_Q"/>
+<div class="has-tooltip relative h-10 w-10 rounded-full overflow-hidden border-2 border-primary-container cursor-pointer">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYC5JJNfRwUwmq3B4QxLLs3RKhWnzt_1xWEUrylajArUcQjCzxU9FCs9RQwVbS1Ii6eDSB6EkXguDTLxDpGu-Qed6ETLMB7TKRUkJhJZO4Uswamzi7ZccL1gGYvRETdNT-vXlr_UqW5jlLLHvzb9Y1JOI89D2sHLi6N3sjllmQ2YHMBTO7IYFZwOQHkCzeA7A_K2n_f2q0J_v6Go4DrPjb5PM0-oagismtQ2uJa4rZzrw4AwGLWNBBtJ1PDubHSS4SQAWpjyq4x_Q"/>
+<div class="tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-inverse-surface text-inverse-on-surface text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">Julian Sterling (Owner)</div>
 </div>
 </div>
 </div>
@@ -119,40 +122,42 @@
 <div class="flex max-w-[1920px] mx-auto px-8 py-8 gap-8">
 <!-- Sidebar Navigation -->
 <aside class="hidden md:flex flex-col w-64 gap-8 shrink-0">
-<div class="bg-surface-container-low rounded-3xl p-6 flex flex-col gap-2">
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container font-semibold transition-all" href="#">
+<div class="bg-surface-container-low rounded-3xl p-6 flex flex-col gap-2" id="sidebar-tabs">
+<button class="tab-trigger flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container font-semibold transition-all w-full text-left" data-tab="overview" onclick="switchTab('overview')">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
 <span>Overview</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+</button>
+<button class="tab-trigger flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all w-full text-left" data-tab="bids" onclick="switchTab('bids')">
 <span class="material-symbols-outlined">gavel</span>
 <span>My Bids</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+</button>
+<button class="tab-trigger flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all w-full text-left" data-tab="gallery" onclick="switchTab('gallery')">
 <span class="material-symbols-outlined">gallery_thumbnail</span>
 <span>My Gallery</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+</button>
+<button class="tab-trigger flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all w-full text-left" data-tab="settings" onclick="switchTab('settings')">
 <span class="material-symbols-outlined">settings</span>
 <span>Settings</span>
-</a>
+</button>
 </div>
-<div class="bg-gradient-to-br from-primary to-primary-dim rounded-3xl p-6 text-on-primary relative overflow-hidden shadow-lg shadow-primary/20">
+<div class="has-tooltip relative bg-gradient-to-br from-primary to-primary-dim rounded-3xl p-6 text-on-primary overflow-hidden shadow-lg shadow-primary/20 cursor-pointer">
 <div class="relative z-10">
 <p class="text-sm opacity-90 mb-1">Curation Status</p>
 <h4 class="font-headline font-bold text-xl mb-4 italic">Gold Member</h4>
 <button class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-white/30 transition-all">View Benefits</button>
 </div>
 <span class="absolute -right-4 -bottom-4 material-symbols-outlined text-8xl opacity-10">verified</span>
+<div class="tooltip absolute top-2 right-2 bg-white text-primary text-[10px] px-2 py-1 rounded shadow-lg z-20">Premium Collector Status Active</div>
 </div>
 </aside>
 <!-- Main Content Area -->
 <main class="flex-1 min-w-0">
+<!-- Overview Tab -->
+<div class="tab-content active" id="overview-tab">
 <header class="mb-10">
 <h1 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Welcome back, <span class="text-primary italic">Julian</span></h1>
 <p class="text-on-surface-variant mt-2">Your private collection grew by 12% this month.</p>
 </header>
-<!-- Metric Cards (Bento style) -->
 <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 <div class="bg-surface-container-lowest p-8 rounded-3xl shadow-xl shadow-on-surface/5 flex flex-col justify-between border border-white/50">
 <div class="flex justify-between items-start">
@@ -187,76 +192,59 @@
 </div>
 </div>
 </section>
-<!-- Active Bids and Gilded Gallery (Asymmetric Layout) -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 <!-- Active Bids List -->
 <section class="lg:col-span-4 flex flex-col gap-6">
 <div class="flex items-center justify-between">
 <h2 class="font-headline text-2xl font-bold italic">Active Bids</h2>
-<button class="text-sm font-semibold text-primary">View All</button>
+<button class="text-sm font-semibold text-primary" onclick="switchTab('bids')">View All</button>
 </div>
 <div class="flex flex-col gap-4">
-<!-- Bid Item -->
+<!-- Bid Item 1 -->
 <div class="group bg-surface-container-low hover:bg-surface-container transition-all p-4 rounded-2xl flex gap-4 items-center">
-<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Abstract vibrant oil painting with heavy texture and strokes of coral and ochre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXHDP14isFibYF7Zo_D3yukMkCRkv0hBCYJrmW8NoG_Wk5ANerb7vhtrH_lbARu-9veExdP5yZPHYGhJMKRXbjRY2UzrrQCAQp7r5JS71TqH-O4vl9MaA0DQhgOxJLBGsOhEn5mcBmKlBp9gutDfMtGIvBHPpqqfapDgHBkggsG2YVzhM_cwONmP3mxR4wypSUtVjyA0j7-unagKB6EX86tFuhvTvv7GPUKb0JJp62HhL8jnIZJnhAdXVJtoum046DUVOPzAhHAf8"/>
+<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 cursor-pointer">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXHDP14isFibYF7Zo_D3yukMkCRkv0hBCYJrmW8NoG_Wk5ANerb7vhtrH_lbARu-9veExdP5yZPHYGhJMKRXbjRY2UzrrQCAQp7r5JS71TqH-O4vl9MaA0DQhgOxJLBGsOhEn5mcBmKlBp9gutDfMtGIvBHPpqqfapDgHBkggsG2YVzhM_cwONmP3mxR4wypSUtVjyA0j7-unagKB6EX86tFuhvTvv7GPUKb0JJp62HhL8jnIZJnhAdXVJtoum046DUVOPzAhHAf8"/>
 </div>
 <div class="flex-1 min-w-0">
 <h4 class="font-bold text-sm truncate">Luminous Echoes</h4>
 <p class="text-xs text-on-surface-variant">Artist: Sofia K.</p>
+<button class="mt-1 text-[10px] font-bold text-primary underline" onclick="openBidModal('Luminous Echoes', '2.4')">Quick Bid</button>
 </div>
 <div class="text-right">
 <p class="text-sm font-bold text-primary">2.4 ETH</p>
 <p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Winning</p>
 </div>
 </div>
-<!-- Bid Item -->
+<!-- Bid Item 2 -->
 <div class="group bg-surface-container-low hover:bg-surface-container transition-all p-4 rounded-2xl flex gap-4 items-center">
-<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Modernist sculptural object with smooth curved lines in a serene white gallery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDomzdFW5GAJxgX-ULGoX2d7HzHw0C9Dgc6iwsP3Wg02tCAXR4ZGY9u6Y9vBbTrfWGUmfliMojdQYnuCX296ppykMrQbik3X9cUiAnDaGjztz20WK1nO3NWnCGAr2F5WE0HN3i8g5HS8CpQdpeROFStXU2TcGhrgFIQzSZ87OsGsMCIYtXwzPSwpah-SZfcuHesclh5FZAGTAPXW2sX-duV8eG_ZEwsJ-gDfT4W3bWEWVi9Gm2eYGkbySzeBiMFip4oiXzvN-5IEas"/>
+<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 cursor-pointer">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDomzdFW5GAJxgX-ULGoX2d7HzHw0C9Dgc6iwsP3Wg02tCAXR4ZGY9u6Y9vBbTrfWGUmfliMojdQYnuCX296ppykMrQbik3X9cUiAnDaGjztz20WK1nO3NWnCGAr2F5WE0HN3i8g5HS8CpQdpeROFStXU2TcGhrgFIQzSZ87OsGsMCIYtXwzPSwpah-SZfcuHesclh5FZAGTAPXW2sX-duV8eG_ZEwsJ-gDfT4W3bWEWVi9Gm2eYGkbySzeBiMFip4oiXzvN-5IEas"/>
 </div>
 <div class="flex-1 min-w-0">
 <h4 class="font-bold text-sm truncate">Vessel of Silence</h4>
 <p class="text-xs text-on-surface-variant">Artist: Aris T.</p>
+<button class="mt-1 text-[10px] font-bold text-error underline" onclick="openBidModal('Vessel of Silence', '1.8')">Increase Bid</button>
 </div>
 <div class="text-right">
 <p class="text-sm font-bold text-on-surface">1.8 ETH</p>
 <p class="text-[10px] text-error font-bold uppercase tracking-tighter">Outbid</p>
 </div>
 </div>
-<!-- Bid Item -->
-<div class="group bg-surface-container-low hover:bg-surface-container transition-all p-4 rounded-2xl flex gap-4 items-center">
-<div class="w-16 h-16 rounded-xl overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Minimalist landscape painting showing a sun-drenched horizon line with soft pastel tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDte0ubeGfrwg0q2JD-A1hu7wzTOh8nzJBEJJG2KAJ_O4gCziFNhJYWqkD1SUAsjxrYgtT4hB42kXyHTvjj0aiEVsq1tiRF7bI4VcOOFs6gd6wMs-v1K95kA0whk4zOrKajQOYbT11EMT78w6Cl_IBHGA9c4YlQGXi3h5SbzOZOZI-QbcEU9FNQswLGFgnDNwwJCP9DTeY2KcbBTYijgA-sPHjm0hgXumfzCH2x9w687mZG0D0d02wnlYMec1dCrEruw0DzzGfZ1BE"/>
-</div>
-<div class="flex-1 min-w-0">
-<h4 class="font-bold text-sm truncate">Morning Horizon</h4>
-<p class="text-xs text-on-surface-variant">Artist: Elena R.</p>
-</div>
-<div class="text-right">
-<p class="text-sm font-bold text-primary">4.1 ETH</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Winning</p>
-</div>
-</div>
 </div>
 </section>
-<!-- My Gilded Gallery (Grid) -->
+<!-- My Gilded Gallery (Preview) -->
 <section class="lg:col-span-8">
 <div class="flex items-center justify-between mb-6">
 <h2 class="font-headline text-2xl font-bold italic">My Gilded Gallery</h2>
-<div class="flex gap-2">
-<button class="material-symbols-outlined p-2 hover:bg-surface-container-low rounded-full">grid_view</button>
-<button class="material-symbols-outlined p-2 hover:bg-surface-container-low rounded-full">filter_list</button>
-</div>
+<button class="text-sm font-semibold text-primary" onclick="switchTab('gallery')">View All</button>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<!-- Art Card -->
-<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-xl shadow-on-surface/5 transition-transform duration-500 hover:-translate-y-2">
+<a class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-xl shadow-on-surface/5 transition-transform duration-500 hover:-translate-y-2 block" href="#">
 <div class="aspect-[4/5] overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dynamic digital painting featuring flowing liquid shapes in shades of deep teal and coral pink" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4_Mh5mN9tOCPKHSGIWn0D7VEAUYI0gurNQlJO6aRGmOoQwX7XajjSisyEuOrNCJts9rPqJtqwMKPEXvoELl5zEhWYVX08Sl07Cr0j7u5huny25isYpYELNUQkQ0t4qOvAjsgdDEHW_AewsQsKpq389HT1IiWY3cS8cGVTpIhb4_qxXqYX-OMl9LX3p9m3pb34RCMz6uoKwSaaDIoEqrM19Tsqhu-EhDAPT29qfwjyaNNbjH4_oJJ8nOtTI88cPvDgwjMt0nqBGyM"/>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4_Mh5mN9tOCPKHSGIWn0D7VEAUYI0gurNQlJO6aRGmOoQwX7XajjSisyEuOrNCJts9rPqJtqwMKPEXvoELl5zEhWYVX08Sl07Cr0j7u5huny25isYpYELNUQkQ0t4qOvAjsgdDEHW_AewsQsKpq389HT1IiWY3cS8cGVTpIhb4_qxXqYX-OMl9LX3p9m3pb34RCMz6uoKwSaaDIoEqrM19Tsqhu-EhDAPT29qfwjyaNNbjH4_oJJ8nOtTI88cPvDgwjMt0nqBGyM"/>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-<button class="bg-primary text-on-primary py-3 rounded-xl font-bold shadow-lg shadow-primary/30">View Provenance</button>
+<span class="bg-primary text-center text-on-primary py-3 rounded-xl font-bold shadow-lg shadow-primary/30">View Provenance</span>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-2">
@@ -265,66 +253,241 @@
 </div>
 <p class="text-on-surface-variant text-sm italic">Purchased Oct 2023</p>
 </div>
-</div>
-<!-- Art Card -->
-<div class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-xl shadow-on-surface/5 transition-transform duration-500 hover:-translate-y-2">
-<div class="aspect-[4/5] overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="High contrast photograph of a marble statue with dramatic shadow play in a bright gallery hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjHZsFFVuDVTm-DXN9yBM2H4nJWx2evddCBJ5ELvmu02JexQm6_DUwowwlLXVYgYAdECd4dEtNoNHSkvBi-vmhsgNq1l8j0CWTcRQXU9FVTQ2pDeCDekQiWAerdjb4Pr07GnXtdoNYWpcoK7Aab9W-hw7YDQcXb2pItAjbRAiw9L5qjwaeLpqRf2ur6uaeWWgODGilz3H8Yn2AWtortPI-mj3_W91_Y5MmcxfLsxF0QgetTT1ILkr_QCDgm5JMSmXuMZxY2Cg3EJ0"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-<button class="bg-primary text-on-primary py-3 rounded-xl font-bold shadow-lg shadow-primary/30">View Provenance</button>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="font-headline font-bold text-xl">Stasis III</h3>
-<span class="text-[10px] bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded-full font-bold uppercase">Acquired</span>
-</div>
-<p class="text-on-surface-variant text-sm italic">Purchased Dec 2023</p>
-</div>
-</div>
+</a>
 </div>
 </section>
 </div>
+</div>
+<!-- Bids Tab -->
+<div class="tab-content" id="bids-tab">
+<header class="mb-10">
+<h1 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Manage <span class="text-primary italic">Bids</span></h1>
+<p class="text-on-surface-variant mt-2">Track and update your active offers.</p>
+</header>
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm">
+<table class="w-full text-left">
+<thead class="border-b border-outline-variant/30">
+<tr>
+<th class="pb-4 font-bold text-sm">Artwork</th>
+<th class="pb-4 font-bold text-sm">Status</th>
+<th class="pb-4 font-bold text-sm">My Bid</th>
+<th class="pb-4 font-bold text-sm text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXHDP14isFibYF7Zo_D3yukMkCRkv0hBCYJrmW8NoG_Wk5ANerb7vhtrH_lbARu-9veExdP5yZPHYGhJMKRXbjRY2UzrrQCAQp7r5JS71TqH-O4vl9MaA0DQhgOxJLBGsOhEn5mcBmKlBp9gutDfMtGIvBHPpqqfapDgHBkggsG2YVzhM_cwONmP3mxR4wypSUtVjyA0j7-unagKB6EX86tFuhvTvv7GPUKb0JJp62HhL8jnIZJnhAdXVJtoum046DUVOPzAhHAf8"/>
+<span class="font-bold text-sm">Luminous Echoes</span>
+</div>
+</td>
+<td class="py-4">
+<span class="text-[10px] bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-bold uppercase">Winning</span>
+</td>
+<td class="py-4 text-sm font-bold">2.4 ETH</td>
+<td class="py-4 text-right">
+<button class="text-primary font-bold text-xs hover:underline" onclick="openBidModal('Luminous Echoes', '2.4')">Increase</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDomzdFW5GAJxgX-ULGoX2d7HzHw0C9Dgc6iwsP3Wg02tCAXR4ZGY9u6Y9vBbTrfWGUmfliMojdQYnuCX296ppykMrQbik3X9cUiAnDaGjztz20WK1nO3NWnCGAr2F5WE0HN3i8g5HS8CpQdpeROFStXU2TcGhrgFIQzSZ87OsGsMCIYtXwzPSwpah-SZfcuHesclh5FZAGTAPXW2sX-duV8eG_ZEwsJ-gDfT4W3bWEWVi9Gm2eYGkbySzeBiMFip4oiXzvN-5IEas"/>
+<span class="font-bold text-sm">Vessel of Silence</span>
+</div>
+</td>
+<td class="py-4">
+<span class="text-[10px] bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-bold uppercase">Outbid</span>
+</td>
+<td class="py-4 text-sm font-bold">1.8 ETH</td>
+<td class="py-4 text-right">
+<button class="text-primary font-bold text-xs hover:underline" onclick="openBidModal('Vessel of Silence', '1.8')">Increase</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Gallery Tab -->
+<div class="tab-content" id="gallery-tab">
+<header class="mb-10 flex justify-between items-end">
+<div>
+<h1 class="font-headline text-4xl font-bold tracking-tight text-on-surface">My <span class="text-primary italic">Gallery</span></h1>
+<p class="text-on-surface-variant mt-2">Curate and view your acquired masterpieces.</p>
+</div>
+<div class="flex gap-2">
+<button class="material-symbols-outlined p-2 bg-surface-container-low rounded-xl">grid_view</button>
+<button class="material-symbols-outlined p-2 hover:bg-surface-container-low rounded-xl">filter_list</button>
+</div>
+</header>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Gallery Item 1 -->
+<a class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-xl shadow-on-surface/5 transition-transform duration-500 hover:-translate-y-2 block" href="#">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4_Mh5mN9tOCPKHSGIWn0D7VEAUYI0gurNQlJO6aRGmOoQwX7XajjSisyEuOrNCJts9rPqJtqwMKPEXvoELl5zEhWYVX08Sl07Cr0j7u5huny25isYpYELNUQkQ0t4qOvAjsgdDEHW_AewsQsKpq389HT1IiWY3cS8cGVTpIhb4_qxXqYX-OMl9LX3p9m3pb34RCMz6uoKwSaaDIoEqrM19Tsqhu-EhDAPT29qfwjyaNNbjH4_oJJ8nOtTI88cPvDgwjMt0nqBGyM"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline font-bold text-xl mb-1">Azure Flow #04</h3>
+<p class="text-on-surface-variant text-sm italic">Purchased Oct 2023</p>
+</div>
+</a>
+<!-- Gallery Item 2 -->
+<a class="group relative bg-surface-container-lowest rounded-[2rem] overflow-hidden shadow-xl shadow-on-surface/5 transition-transform duration-500 hover:-translate-y-2 block" href="#">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjHZsFFVuDVTm-DXN9yBM2H4nJWx2evddCBJ5ELvmu02JexQm6_DUwowwlLXVYgYAdECd4dEtNoNHSkvBi-vmhsgNq1l8j0CWTcRQXU9FVTQ2pDeCDekQiWAerdjb4Pr07GnXtdoNYWpcoK7Aab9W-hw7YDQcXb2pItAjbRAiw9L5qjwaeLpqRf2ur6uaeWWgODGilz3H8Yn2AWtortPI-mj3_W91_Y5MmcxfLsxF0QgetTT1ILkr_QCDgm5JMSmXuMZxY2Cg3EJ0"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline font-bold text-xl mb-1">Stasis III</h3>
+<p class="text-on-surface-variant text-sm italic">Purchased Dec 2023</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Settings Tab -->
+<div class="tab-content" id="settings-tab">
+<header class="mb-10">
+<h1 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Account <span class="text-primary italic">Settings</span></h1>
+<p class="text-on-surface-variant mt-2">Manage your profile and preferences.</p>
+</header>
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm max-w-2xl border border-outline-variant/20">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-bold mb-2">Display Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary" type="text" value="Julian Sterling"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2">Wallet Address</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-low border-none rounded-xl py-3 px-4 text-on-surface-variant" readonly="" type="text" value="0x742d...44e"/>
+<button class="bg-surface-container-high px-4 rounded-xl material-symbols-outlined">content_copy</button>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold">Save Changes</button>
+</div>
+</div>
+</div>
+</div>
 </main>
 </div>
-<!-- Footer -->
-<footer class="w-full rounded-t-[2rem] mt-20 bg-[#eeeeea] dark:bg-[#1a1c1a]">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-[1920px] mx-auto">
-<div class="flex flex-col gap-2">
-<span class="font-['Noto_Serif'] text-lg font-bold text-[#303330] dark:text-white">Masterpiece Market</span>
-<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60">© 2024 Masterpiece Market. The Daylight Gallery.</p>
+<!-- Quick Bid Modal -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm hidden" id="bid-modal">
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-8 max-w-md w-full shadow-2xl animate-in zoom-in-95 duration-200">
+<h2 class="font-headline text-2xl font-bold mb-2">Increase Bid</h2>
+<p class="text-on-surface-variant text-sm mb-6">Placing a new bid for <span class="font-bold text-on-surface" id="modal-art-title"></span></p>
+<div class="space-y-4 mb-8">
+<div class="p-4 bg-surface-container-low rounded-2xl flex justify-between items-center">
+<span class="text-xs font-bold uppercase opacity-60">Current Bid</span>
+<span class="font-bold"><span id="modal-current-bid"></span> ETH</span>
 </div>
-<div class="flex gap-8 items-center">
-<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 hover:text-[#a53d12] transition-colors duration-200" href="#">About</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Auction Rules</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Provenance</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Privacy</a>
-<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 hover:text-[#a53d12] transition-colors duration-200" href="#">Contact</a>
+<div>
+<label class="block text-xs font-bold uppercase opacity-60 mb-2 px-1">Your New Bid</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-2 border-primary/20 rounded-2xl py-4 px-6 text-2xl font-bold focus:ring-0 focus:border-primary transition-all" id="bid-input" step="0.1" type="number" value="2.5"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 font-bold text-on-surface-variant">ETH</span>
 </div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant opacity-60">local_activity</span>
-<span class="material-symbols-outlined text-on-surface-variant opacity-60">language</span>
-<span class="material-symbols-outlined text-on-surface-variant opacity-60">verified_user</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="py-4 rounded-2xl font-bold text-on-surface-variant hover:bg-surface-container-low transition-all" onclick="closeBidModal()">Cancel</button>
+<button class="bg-primary text-on-primary py-4 rounded-2xl font-bold shadow-lg shadow-primary/30 hover:scale-[1.02] active:scale-95 transition-all" onclick="confirmBid()">Place Bid</button>
+</div>
+</div>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 bg-[#eeeeea] dark:bg-stone-950 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-screen-2xl mx-auto">
+<div class="text-center md:text-left">
+<span class="font-serif italic text-lg text-stone-800 dark:text-stone-200">Masterpiece Market</span>
+<p class="font-sans text-sm text-stone-600 dark:text-stone-400 mt-2">© 2024 Masterpiece Market. Masterpiece Market.</p>
+</div>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 items-center">
+<a class="text-stone-500 hover:text-[#a53d12] hover:underline transition-all text-sm font-semibold" href="#">Welcome</a>
+<a class="text-stone-500 hover:text-[#a53d12] hover:underline transition-all text-sm" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-[#a53d12] hover:underline transition-all text-sm" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-[#a53d12] hover:underline transition-all text-sm" href="#">Help Center</a>
+<div class="flex gap-4 ml-4 opacity-80 hover:opacity-100">
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-400">local_activity</span>
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-400">language</span>
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-400">verified_user</span>
+</div>
 </div>
 </div>
 </footer>
 <!-- Bottom Navigation for Mobile -->
 <nav class="fixed bottom-0 left-0 right-0 md:hidden glass-panel z-50 py-3 px-6 flex justify-around items-center border-t border-outline-variant/10">
-<button class="flex flex-col items-center gap-1 text-primary">
+<button class="flex flex-col items-center gap-1 text-primary" onclick="switchTab('overview')">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
 <span class="text-[10px] font-bold">Home</span>
 </button>
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
-<span class="material-symbols-outlined">explore</span>
-<span class="text-[10px] font-medium">Explore</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="switchTab('bids')">
 <span class="material-symbols-outlined">gavel</span>
 <span class="text-[10px] font-medium">Bids</span>
 </button>
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="switchTab('gallery')">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Gallery</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant" onclick="switchTab('settings')">
 <span class="material-symbols-outlined">person</span>
 <span class="text-[10px] font-medium">Profile</span>
 </button>
 </nav>
+<script>
+        function switchTab(tabName) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Remove active styles from buttons
+            document.querySelectorAll('.tab-trigger').forEach(btn => {
+                btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+                btn.classList.add('text-on-surface-variant');
+                const icon = btn.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+            });
+
+            // Show current
+            document.getElementById(tabName + '-tab').classList.add('active');
+            
+            // Style active trigger
+            const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+                activeBtn.classList.remove('text-on-surface-variant');
+                const icon = activeBtn.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+            }
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openBidModal(title, currentBid) {
+            const modal = document.getElementById('bid-modal');
+            document.getElementById('modal-art-title').innerText = title;
+            document.getElementById('modal-current-bid').innerText = currentBid;
+            document.getElementById('bid-input').value = (parseFloat(currentBid) + 0.1).toFixed(1);
+            modal.classList.remove('hidden');
+        }
+
+        function closeBidModal() {
+            document.getElementById('bid-modal').classList.add('hidden');
+        }
+
+        function confirmBid() {
+            const newBid = document.getElementById('bid-input').value;
+            alert('Placing bid: ' + newBid + ' ETH. Transaction pending...');
+            closeBidModal();
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('bid-modal');
+            if (event.target == modal) {
+                closeBidModal();
+            }
+        }
+    </script>
 </body></html>

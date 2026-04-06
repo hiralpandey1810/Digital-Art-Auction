@@ -3,7 +3,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
     tailwind.config = {
@@ -92,30 +91,39 @@
       color: #303330;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    [data-tab].active {
+        color: #a53d12;
+        border-color: #a53d12;
+    }
   </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar Navigation Shell -->
-<nav class="sticky top-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-2xl dark:bg-[#303330]/80 shadow-xl shadow-[#303330]/5">
-<div class="flex items-center justify-between px-8 py-4 max-w-[1920px] mx-auto">
+<!-- Shared TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-2xl dark:bg-stone-900/80 shadow-sm dark:shadow-none transition-all">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto font-serif">
 <div class="flex items-center gap-12">
-<a class="font-['Noto_Serif'] font-bold text-[#a53d12] dark:text-[#ffad91] italic text-2xl tracking-tight" href="#">Masterpiece Market</a>
+<a class="text-2xl font-serif font-bold text-[#a53d12] dark:text-[#ffad91] italic tracking-tight" href="#">Masterpiece Market</a>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Explore</a>
-<a class="text-[#a53d12] font-semibold border-b-2 border-[#a53d12] pb-1" href="#">Auctions</a>
-<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Artists</a>
-<a class="text-[#303330]/70 dark:text-white/70 font-medium hover:text-[#a53d12] transition-colors" href="#">Journal</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#a53d12] font-medium transition-colors" href="#">Home</a>
+<a class="text-[#a53d12] border-b-2 border-[#a53d12] font-bold pb-1" href="#">Auctions</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#a53d12] font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#a53d12] font-medium transition-colors" href="#">Upload</a>
 </div>
 </div>
 <div class="flex items-center gap-6">
 <div class="relative hidden lg:block">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
-<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 w-64 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search artworks..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">search</span>
+<input class="bg-[#f4f4f0] dark:bg-stone-800 border-none rounded-full py-2 pl-10 pr-4 w-64 focus:ring-2 focus:ring-[#a53d12]/20 text-sm" placeholder="Search artworks..." type="text"/>
 </div>
 <div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">notifications</button>
-<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">shopping_bag</button>
-<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold hover:scale-[1.02] hover:shadow-lg transition-all duration-300 active:scale-95">Connect Wallet</button>
+<button class="text-stone-600 dark:text-stone-400 hover:text-[#a53d12] font-medium">Sign In</button>
+<button class="bg-[#a53d12] text-white px-6 py-2.5 rounded-xl font-bold hover:scale-[1.02] hover:shadow-lg transition-all duration-300 active:scale-95">Connect Wallet</button>
 </div>
 </div>
 </div>
@@ -129,16 +137,16 @@
 <span class="material-symbols-outlined text-xs">chevron_right</span>
 <span class="text-on-surface">Ethereal Resonance</span>
 </nav>
-<!-- Hero Content: Asymmetrical Layout -->
+<!-- Hero Content -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-32">
 <!-- Left: Artwork Preview -->
 <div class="lg:col-span-7 relative group">
 <div class="bg-surface-container-low rounded-[2rem] p-4 lg:p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
-<img alt="Ethereal Resonance" class="w-full aspect-[4/5] object-cover rounded-[1.5rem] shadow-xl" data-alt="A mesmerizing digital painting titled Ethereal Resonance featuring flowing abstract shapes in coral, lavender, and gold with luminous textures and depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09NvCeHewcnUoyWjwtcPCiTCMZNNXcNr2Iof8BzZAqvYJI0M1wAmVUkhJ9LHJ6J8_d4C6tGTLmdhaKgOGJtXgmlBDXE7WdOqOocmaVfAVDQDUWxWvUiWE_aF71AVMHQlsSpD9jJlPpM2WJ3IiEl8QuTY7u5p7bsAYvrtkCdNv83khrhy-Dl46tGoKmJqWz_8KsTyl2G4HTIKxSqarWEg6Y98WoWtxJwK572zpqyqGKYhFBATYV1ArZb2vaVUjrPar6S-z4Q7B5wU"/>
+<img alt="Ethereal Resonance" class="w-full aspect-[4/5] object-cover rounded-[1.5rem] shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA09NvCeHewcnUoyWjwtcPCiTCMZNNXcNr2Iof8BzZAqvYJI0M1wAmVUkhJ9LHJ6J8_d4C6tGTLmdhaKgOGJtXgmlBDXE7WdOqOocmaVfAVDQDUWxWvUiWE_aF71AVMHQlsSpD9jJlPpM2WJ3IiEl8QuTY7u5p7bsAYvrtkCdNv83khrhy-Dl46tGoKmJqWz_8KsTyl2G4HTIKxSqarWEg6Y98WoWtxJwK572zpqyqGKYhFBATYV1ArZb2vaVUjrPar6S-z4Q7B5wU"/>
 </div>
 <!-- Artist Badge Floating -->
 <div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-2xl flex items-center gap-4 shadow-xl border border-white/20">
-<img alt="Julian Sterling" class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of Julian Sterling, a contemporary digital artist with a thoughtful expression in a bright minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Pl1ACOvvzj2LsG22WNwIKAhjgB5z4RqoK06q8tmQpN0FzR_UTMTV-HDu4hh-l1qi1WErQbO9CRB5COfd-DL-uhTjFGizoWkJbLb_QIx2YyuOk9-YVE1StuMlu6dt6TT12mgmbLsrGSj_TiuhLlEXsH3eQGvgg6WF2Vqzf7UHf-tSyu4zNnargX13yAJe1m2Tb-XGljoZlcMOYRVaeptSB7A3fya_u7Fj2kqXzSXju4MeWg-sOETlmURQNsvYIv1nsVJsxbmn3tE"/>
+<img alt="Julian Sterling" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Pl1ACOvvzj2LsG22WNwIKAhjgB5z4RqoK06q8tmQpN0FzR_UTMTV-HDu4hh-l1qi1WErQbO9CRB5COfd-DL-uhTjFGizoWkJbLb_QIx2YyuOk9-YVE1StuMlu6dt6TT12mgmbLsrGSj_TiuhLlEXsH3eQGvgg6WF2Vqzf7UHf-tSyu4zNnargX13yAJe1m2Tb-XGljoZlcMOYRVaeptSB7A3fya_u7Fj2kqXzSXju4MeWg-sOETlmURQNsvYIv1nsVJsxbmn3tE"/>
 <div>
 <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-0.5">Created By</p>
 <p class="font-headline font-bold text-xl">Julian Sterling</p>
@@ -151,14 +159,14 @@
 <div class="flex items-center gap-3 mb-4">
 <span class="bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold tracking-widest flex items-center gap-2">
 <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">fiber_manual_record</span>
-              LIVE NOW
-            </span>
+                        LIVE NOW
+                    </span>
 <span class="text-on-surface-variant text-sm font-medium">Series 1 of 1</span>
 </div>
 <h1 class="font-headline text-5xl lg:text-7xl font-bold tracking-tight mb-6">Ethereal Resonance</h1>
 <p class="text-lg text-on-surface-variant leading-relaxed font-body max-w-xl">
-            A visceral exploration of memory and frequency. Julian Sterling's masterwork utilizes generative algorithms to map emotional peaks into a fluid, ethereal landscape of light and texture.
-          </p>
+                    A visceral exploration of memory and frequency. Julian Sterling's masterwork utilizes generative algorithms to map emotional peaks into a fluid, ethereal landscape of light and texture.
+                </p>
 </header>
 <!-- Bidding Card -->
 <div class="bg-surface-container-lowest rounded-[2rem] p-8 shadow-2xl shadow-on-surface/5 border border-outline-variant/10">
@@ -166,25 +174,29 @@
 <div class="space-y-1">
 <p class="text-on-surface-variant text-sm font-semibold tracking-wide">Current Bid</p>
 <div class="flex items-baseline gap-2">
-<p class="text-4xl font-bold text-on-surface">14.85 ETH</p>
+<p class="text-4xl font-bold text-on-surface" id="current-bid-val">14.85 ETH</p>
 <p class="text-on-surface-variant font-medium">($32,104.20)</p>
 </div>
 </div>
 <div class="space-y-1">
 <p class="text-on-surface-variant text-sm font-semibold tracking-wide">Ending In</p>
-<p class="text-4xl font-bold text-on-surface tabular-nums">12:32:18</p>
+<p class="text-4xl font-bold text-on-surface tabular-nums" id="countdown">12:32:18</p>
 </div>
 </div>
 <div class="space-y-4">
-<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] hover:shadow-xl transition-all duration-300 active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+<div class="flex flex-col gap-2">
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 px-6 text-lg focus:ring-2 focus:ring-primary/20" id="bid-amount" min="15.00" placeholder="Enter bid amount (Min 15.00 ETH)" step="0.15" type="number"/>
+<p class="text-error text-xs font-semibold hidden" id="bid-error">Bid must be at least 15.00 ETH</p>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] hover:shadow-xl transition-all duration-300 active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20" id="bid-btn">
 <span class="material-symbols-outlined">account_balance_wallet</span>
-              Place Your Bid
-            </button>
+                        Place Your Bid
+                    </button>
 <div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant px-2 uppercase tracking-tighter">
 <span>Min. bid increment: 0.15 ETH</span>
 <a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
-                Auction Rules
-                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            Auction Rules
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
 </a>
 </div>
 </div>
@@ -202,19 +214,20 @@
 </div>
 </div>
 </div>
-<!-- Secondary Content: Bid History & Artist More -->
+<!-- Secondary Content: Tabs -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-<!-- Bid History -->
-<section class="lg:col-span-5">
-<div class="flex items-center justify-between mb-8">
-<h2 class="font-headline text-3xl font-bold italic">Bid History</h2>
-<button class="text-primary font-bold text-sm hover:underline">View All</button>
+<div class="lg:col-span-7">
+<!-- Tabs Header -->
+<div class="flex gap-8 border-b border-outline-variant/30 mb-8">
+<button class="active font-headline text-2xl font-bold italic pb-4 border-b-2 border-transparent transition-all" data-tab="bid-history">Bid History</button>
+<button class="font-headline text-2xl font-bold italic pb-4 border-b-2 border-transparent text-on-surface-variant transition-all" data-tab="provenance">Provenance</button>
+<button class="font-headline text-2xl font-bold italic pb-4 border-b-2 border-transparent text-on-surface-variant transition-all" data-tab="details">Details</button>
 </div>
-<div class="space-y-2">
-<!-- History Item -->
+<!-- Tab Content: Bid History -->
+<div class="tab-content active space-y-2" id="bid-history">
 <div class="bg-white flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-shadow group">
 <div class="flex items-center gap-4">
-<img alt="Bidder 1" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Profile avatar of a digital art collector with a minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y2CTAnwKOxiWDz5bC1NgAzPlVu_4Aa0UVKGOEkECWmCiprcJLSHkYmg9kdeHTmNKkI4uR9Hjdn2xE9TWbo5YpF-f8DKv8j-i_Vg-ayCl7KNnSBBEjw8vLKGn03tiJba5O5eCDBeM8sK8PXB3hgR6JpDF_HKF0oXrvgWQTp-MWbOZV6TJs5TXTPouSiGOL7U1thbb2UbL6k0BN_K9KLx_L2_p2YQTyco7mU_gLbjQmz3Ndl0HHT90_t3XNCZuDYAYi30JoQGZ0Oc"/>
+<img alt="Bidder 1" class="w-10 h-10 rounded-full bg-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Y2CTAnwKOxiWDz5bC1NgAzPlVu_4Aa0UVKGOEkECWmCiprcJLSHkYmg9kdeHTmNKkI4uR9Hjdn2xE9TWbo5YpF-f8DKv8j-i_Vg-ayCl7KNnSBBEjw8vLKGn03tiJba5O5eCDBeM8sK8PXB3hgR6JpDF_HKF0oXrvgWQTp-MWbOZV6TJs5TXTPouSiGOL7U1thbb2UbL6k0BN_K9KLx_L2_p2YQTyco7mU_gLbjQmz3Ndl0HHT90_t3XNCZuDYAYi30JoQGZ0Oc"/>
 <div>
 <p class="font-bold text-sm">curator_0x1</p>
 <p class="text-on-surface-variant text-xs">2 minutes ago</p>
@@ -225,10 +238,9 @@
 <p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Active Bid</p>
 </div>
 </div>
-<!-- History Item -->
 <div class="bg-white flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-shadow group">
 <div class="flex items-center gap-4">
-<img alt="Bidder 2" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Abstract colorful profile avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCVSCKnZfKSWYN81pW--LgJ0wGMrhYT75Cm3i1pqfSlSGkZmOWgHqjQc_yK54a_KDLbIqbyRl0NB45kIf1eJfxaGGc0PkCH_GQesZRSFivtEAAT52Kmz-iwG106r766vmQv6PJtpCECMFVF-n8KSP22hbfcj_J53lqDWDP89t0YymsGr375yeONrPcGfbIFu4noLC_cnY0c7c8IzR7himpgdY4Do9VN4GHgkgD7sqjRXTFQXui0IEtKeqVtZnu8IqPwocJovn5-I"/>
+<img alt="Bidder 2" class="w-10 h-10 rounded-full bg-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJCVSCKnZfKSWYN81pW--LgJ0wGMrhYT75Cm3i1pqfSlSGkZmOWgHqjQc_yK54a_KDLbIqbyRl0NB45kIf1eJfxaGGc0PkCH_GQesZRSFivtEAAT52Kmz-iwG106r766vmQv6PJtpCECMFVF-n8KSP22hbfcj_J53lqDWDP89t0YymsGr375yeONrPcGfbIFu4noLC_cnY0c7c8IzR7himpgdY4Do9VN4GHgkgD7sqjRXTFQXui0IEtKeqVtZnu8IqPwocJovn5-I"/>
 <div>
 <p class="font-bold text-sm">seraphim.eth</p>
 <p class="text-on-surface-variant text-xs">15 minutes ago</p>
@@ -239,41 +251,46 @@
 <p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Outbid</p>
 </div>
 </div>
-<!-- History Item -->
-<div class="bg-white flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-shadow group">
-<div class="flex items-center gap-4">
-<img alt="Bidder 3" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Monochromatic stylish profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKHu7Qzes-H9M36B_CDRddImuoPkYjdcnA-TD4c4i8b9R37MpWoC_CMWHSdbC61qXJSmU-5_5rBTjVbzgyWhcGaRmmr4X_96z5Iz3lM0NAEKd_Dc7Enqm7Jyo44Fv_qr9n1ym5SS2mp2mFaVjmsmYEHVh7o0hlfG_R254YvP_B_Yt91PcAZJxEVhp1SUi4ztVRYtg63fM-AU7tmSJGIGyPcnGRTklxBt5HapPix8Nj1NKHt-13JeOhXiF3yhufNkCEuccYDa09ArY"/>
-<div>
-<p class="font-bold text-sm">vault_walker</p>
-<p class="text-on-surface-variant text-xs">42 minutes ago</p>
+</div>
+<!-- Tab Content: Provenance -->
+<div class="tab-content space-y-4" id="provenance">
+<div class="bg-surface-container-low p-6 rounded-2xl border-l-4 border-primary">
+<div class="flex justify-between items-start mb-2">
+<p class="font-bold text-lg">Minted</p>
+<span class="text-xs text-on-surface-variant">Oct 24, 2023</span>
+</div>
+<p class="text-sm text-on-surface-variant">Originally minted by <span class="font-bold text-primary">Julian Sterling</span> as part of the 'Resonance' collection.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<div class="flex justify-between items-start mb-2">
+<p class="font-bold text-lg">List for Sale</p>
+<span class="text-xs text-on-surface-variant">Nov 12, 2023</span>
+</div>
+<p class="text-sm text-on-surface-variant">Listed for primary sale at 5.00 ETH.</p>
 </div>
 </div>
-<div class="text-right">
-<p class="font-bold text-on-surface">14.10 ETH</p>
-<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Outbid</p>
+<!-- Tab Content: Details -->
+<div class="tab-content" id="details">
+<div class="prose prose-stone">
+<p class="text-on-surface-variant leading-relaxed">
+                        This digital asset is an ERC-721 token on the Ethereum mainnet. The artwork file is hosted on IPFS with high-redundancy pinning. 
+                        Resolutions: 8000x10000px (lossless PNG).
+                        License: Personal collection rights.
+                    </p>
 </div>
 </div>
 </div>
-</section>
 <!-- More from Artist -->
-<section class="lg:col-span-7">
+<section class="lg:col-span-5">
 <div class="flex items-center justify-between mb-8">
-<h2 class="font-headline text-3xl font-bold italic">More from Julian Sterling</h2>
-<div class="flex gap-2">
-<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">west</span>
-</button>
-<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-colors">
-<span class="material-symbols-outlined">east</span>
-</button>
+<h2 class="font-headline text-3xl font-bold italic">More from Artist</h2>
 </div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="group cursor-pointer">
+<div class="grid grid-cols-1 gap-8">
+<a class="group block" href="#">
 <div class="bg-white p-3 rounded-[1.5rem] mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
-<img alt="Luminous Void" class="w-full aspect-square object-cover rounded-xl" data-alt="Abstract digital artwork with deep blues and brilliant gold highlights in a swirling motion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcimUiJEPly1V7RF4jnP_JNRPvTg2jvJSRIAgU0IIzSrtjqtGyh99-xcOaC2E5LysOr_mwjmNZ_YRU5LEkPWiZJEBMivcfgCXeHiZTjQ3C-g_ZX41P9r1Gfr3OTCi3QN_GRSOC3J3CQXxYZVDksCqPQanJO0j_r5YPGj8H5jutgrBzXs8Y8PdcRZjKRgzNVFCKkmAEWJRRpwdfVzAaCvRihYf4chpO-1gwzMCV3DKRmDKs8N9oOD9Vbhk7Dcb6lOotC68vDaY4Kts"/>
+<img alt="Luminous Void" class="w-full aspect-video object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcimUiJEPly1V7RF4jnP_JNRPvTg2jvJSRIAgU0IIzSrtjqtGyh99-xcOaC2E5LysOr_mwjmNZ_YRU5LEkPWiZJEBMivcfgCXeHiZTjQ3C-g_ZX41P9r1Gfr3OTCi3QN_GRSOC3J3CQXxYZVDksCqPQanJO0j_r5YPGj8H5jutgrBzXs8Y8PdcRZjKRgzNVFCKkmAEWJRRpwdfVzAaCvRihYf4chpO-1gwzMCV3DKRmDKs8N9oOD9Vbhk7Dcb6lOotC68vDaY4Kts"/>
 </div>
-<div class="flex justify-between items-start">
+<div class="flex justify-between items-start px-2">
 <div>
 <p class="font-headline font-bold text-xl group-hover:text-primary transition-colors">Luminous Void</p>
 <p class="text-on-surface-variant text-sm">Edition of 10</p>
@@ -283,12 +300,12 @@
 <p class="text-on-surface-variant text-xs">Floor Price</p>
 </div>
 </div>
-</div>
-<div class="group cursor-pointer">
+</a>
+<a class="group block" href="#">
 <div class="bg-white p-3 rounded-[1.5rem] mb-4 shadow-sm group-hover:shadow-xl transition-all duration-300">
-<img alt="Chromatic Drift" class="w-full aspect-square object-cover rounded-xl" data-alt="Fluid digital painting with vibrant rainbow streaks across a misty white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaUa59K7pR5X5oAygCZywMrcde0eC4-3t66X1I2Fo9H17iZlMYq3t-tuYBXH0FImw0h0RroluDlE742b07QkHA4gFeXwSENv2len2Ff49TL8GBI2RWXmwkIyoamNVqUvmTGkCSuWQd8u0M8qf6ipI-za4uJv4t9eP5VpRfzkNiIo5GwJZVNpTXKf_s2Xkd07H88jjQP6ZjTj6-fMJfeV_j_aZBFgL4E6OrXZAJ0UxCsG43pZSp5oiJfdV0VQIpD5TTIHYILeWf84A"/>
+<img alt="Chromatic Drift" class="w-full aspect-video object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaUa59K7pR5X5oAygCZywMrcde0eC4-3t66X1I2Fo9H17iZlMYq3t-tuYBXH0FImw0h0RroluDlE742b07QkHA4gFeXwSENv2len2Ff49TL8GBI2RWXmwkIyoamNVqUvmTGkCSuWQd8u0M8qf6ipI-za4uJv4t9eP5VpRfzkNiIo5GwJZVNpTXKf_s2Xkd07H88jjQP6ZjTj6-fMJfeV_j_aZBFgL4E6OrXZAJ0UxCsG43pZSp5oiJfdV0VQIpD5TTIHYILeWf84A"/>
 </div>
-<div class="flex justify-between items-start">
+<div class="flex justify-between items-start px-2">
 <div>
 <p class="font-headline font-bold text-xl group-hover:text-primary transition-colors">Chromatic Drift</p>
 <p class="text-on-surface-variant text-sm">Series 2 of 5</p>
@@ -298,33 +315,143 @@
 <p class="text-on-surface-variant text-xs">Highest Bid</p>
 </div>
 </div>
-</div>
+</a>
 </div>
 </section>
 </div>
 </main>
-<!-- Footer Navigation Shell -->
-<footer class="w-full rounded-t-[2rem] mt-20 bg-[#eeeeea] dark:bg-[#1a1c1a]">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-[1920px] mx-auto">
-<div class="space-y-4 text-center md:text-left">
-<p class="font-['Noto_Serif'] text-lg font-bold text-[#303330] dark:text-white">Masterpiece Market</p>
-<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#303330]/60 dark:text-white/60">© 2024 Masterpiece Market. The Daylight Gallery.</p>
+<!-- Success Modal -->
+<div class="fixed inset-0 z-[100] hidden" id="success-modal">
+<div class="absolute inset-0 bg-on-surface/40 backdrop-blur-sm"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface p-8 rounded-[2rem] shadow-2xl w-full max-w-md border border-outline-variant/20 animate-in fade-in zoom-in duration-300">
+<div class="text-center">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">check_circle</span>
 </div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">About</a>
-<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Auction Rules</a>
-<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Provenance</a>
-<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Privacy</a>
-<a class="text-[#303330]/60 dark:text-white/60 hover:text-[#a53d12] transition-colors duration-200 text-sm font-['Plus_Jakarta_Sans'] tracking-wide" href="#">Contact</a>
+<h3 class="font-headline text-3xl font-bold mb-2 italic">Bid Placed!</h3>
+<p class="text-on-surface-variant mb-8">Your bid of <span class="font-bold text-on-surface" id="placed-bid-val"></span> ETH has been successfully registered on the blockchain.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold hover:bg-primary-dim transition-colors" onclick="document.getElementById('success-modal').classList.add('hidden')">
+                Great, thanks!
+            </button>
+</div>
+</div>
+</div>
+<!-- Shared Footer -->
+<footer class="w-full py-12 px-8 bg-[#eeeeea] dark:bg-stone-950 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-screen-2xl mx-auto">
+<div class="space-y-4 text-center md:text-left">
+<p class="font-serif italic text-lg text-stone-800 dark:text-stone-200">Masterpiece Market</p>
+<p class="font-sans text-sm text-stone-600 dark:text-stone-400">© 2024 Masterpiece Market. All rights reserved.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-center md:justify-end gap-8">
+<div class="flex gap-8">
+<a class="text-stone-500 hover:text-[#a53d12] transition-all hover:underline text-sm font-sans" href="#">Welcome</a>
+<a class="text-stone-500 hover:text-[#a53d12] transition-all hover:underline text-sm font-sans" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-[#a53d12] transition-all hover:underline text-sm font-sans" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-[#a53d12] transition-all hover:underline text-sm font-sans" href="#">Help Center</a>
 </div>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all opacity-80 hover:opacity-100" href="#">
 <span class="material-symbols-outlined text-xl">share</span>
 </a>
-<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all opacity-80 hover:opacity-100" href="#">
 <span class="material-symbols-outlined text-xl">camera</span>
 </a>
 </div>
 </div>
+</div>
 </footer>
+<script>
+    // Auction Countdown Logic
+    const countdownEl = document.getElementById('countdown');
+    let timeLeft = 12 * 3600 + 32 * 60 + 18; // 12:32:18 in seconds
+
+    function updateCountdown() {
+        if (timeLeft <= 0) {
+            countdownEl.innerText = "AUCTION ENDED";
+            return;
+        }
+        timeLeft--;
+        const hours = Math.floor(timeLeft / 3600);
+        const minutes = Math.floor((timeLeft % 3600) / 60);
+        const seconds = timeLeft % 60;
+        countdownEl.innerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+    setInterval(updateCountdown, 1000);
+
+    // Tab Switching Logic
+    const tabButtons = document.querySelectorAll('[data-tab]');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.getAttribute('data-tab');
+            
+            // Update Buttons
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active', 'text-primary');
+                btn.classList.add('text-on-surface-variant');
+            });
+            button.classList.add('active');
+            button.classList.remove('text-on-surface-variant');
+
+            // Update Content
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === target) content.classList.add('active');
+            });
+        });
+    });
+
+    // Bidding Logic
+    const bidBtn = document.getElementById('bid-btn');
+    const bidInput = document.getElementById('bid-amount');
+    const bidError = document.getElementById('bid-error');
+    const successModal = document.getElementById('success-modal');
+    const placedBidVal = document.getElementById('placed-bid-val');
+    const currentBidVal = document.getElementById('current-bid-val');
+
+    bidBtn.addEventListener('click', () => {
+        const amount = parseFloat(bidInput.value);
+        const minBid = 15.00;
+
+        if (isNaN(amount) || amount < minBid) {
+            bidError.classList.remove('hidden');
+            bidInput.classList.add('ring-2', 'ring-error/50');
+            return;
+        }
+
+        // Success
+        bidError.classList.add('hidden');
+        bidInput.classList.remove('ring-2', 'ring-error/50');
+        
+        placedBidVal.innerText = amount.toFixed(2);
+        currentBidVal.innerText = `${amount.toFixed(2)} ETH`;
+        successModal.classList.remove('hidden');
+        
+        // Add to history (Mock)
+        const historyContainer = document.getElementById('bid-history');
+        const newItem = document.createElement('div');
+        newItem.className = "bg-primary/5 flex items-center justify-between p-5 rounded-2xl hover:shadow-md transition-all group animate-in slide-in-from-top-4 duration-500";
+        newItem.innerHTML = `
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xs">YOU</div>
+                <div>
+                    <p class="font-bold text-sm">You (Connected Wallet)</p>
+                    <p class="text-on-surface-variant text-xs">Just now</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="font-bold text-on-surface">${amount.toFixed(2)} ETH</p>
+                <p class="text-primary text-[10px] uppercase font-bold tracking-widest">Active Bid</p>
+            </div>
+        `;
+        // Remove 'Active Bid' label from old bids
+        historyContainer.querySelectorAll('.text-[10px]').forEach(el => el.innerText = 'OUTBID');
+        historyContainer.querySelectorAll('.text-on-surface').forEach(el => el.classList.add('text-on-surface-variant'));
+
+        historyContainer.prepend(newItem);
+        bidInput.value = '';
+    });
+</script>
 </body></html>
